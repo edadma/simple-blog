@@ -37,7 +37,7 @@ libraryDependencies ++= Seq(
 
 mainClass in assembly := Some( "ca.hyperreal.Boot" )
 
-jarName in assembly := "spray-basic-" + version.value + ".jar"
+jarName in assembly := "simple-blog-" + version.value + ".jar"
 
 Revolver.settings
 
@@ -67,12 +67,12 @@ pomIncludeRepository := { _ => false }
 
 licenses := Seq("MIT" -> url("http://opensource.org/licenses/MIT"))
 
-homepage := Some(url("https://github.com/edadma/spray-basic"))
+homepage := Some(url("https://github.com/edadma/simple-blog"))
 
 pomExtra := (
   <scm>
-    <url>git@github.com:edadma/spray-basic.git</url>
-    <connection>scm:git:git@github.com:edadma/spray-basic.git</connection>
+    <url>git@github.com:edadma/simple-blog.git</url>
+    <connection>scm:git:git@github.com:edadma/simple-blog.git</connection>
   </scm>
   <developers>
     <developer>
