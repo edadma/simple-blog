@@ -1,0 +1,1 @@
+rsync -azP -e ssh /home/ed/projects/simple-blog/target/scala-2.11/simple-blog-*.jar ed@hyperreal.ca:/var/www/hyperreal.ca/releases
