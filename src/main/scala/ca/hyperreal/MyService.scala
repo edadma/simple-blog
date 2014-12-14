@@ -3,13 +3,16 @@ package ca.hyperreal
 import java.util.Date
 import java.text.SimpleDateFormat
 
+import scala.collection.JavaConversions._
+
+import ca.hyperreal.markdown._
+
 import akka.actor.Actor
 import spray.routing._
 import spray.http._
 import MediaTypes._
 import com.mongodb.casbah.Imports._
 import com.mongodb.BasicDBObject
-import scala.collection.JavaConversions._
 
 
 // we don't implement our route structure directly in the service actor because
@@ -248,7 +251,7 @@ trait MyService extends HttpService {
 														<div class="blog-post">
 															<h2 class="blog-post-title">{e.get("headline")}</h2>
 															<p class="blog-post-meta">{DATE_FORMAT.format( e.get("date") )} by <a href="#">{blog("realname")}</a></p>
-															<p>{e.get("post")}</p>
+															{Markdown.asXML( e.get("post").asInstanceOf[String] )}
 														</div>
 													}
 												}

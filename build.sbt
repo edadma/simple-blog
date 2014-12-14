@@ -8,6 +8,10 @@ scalaVersion  := "2.11.4"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
+resolvers += "Hyperreal Repository" at "http://hyperreal.ca/maven2"
+
+libraryDependencies += "ca.hyperreal" %% "markdown" % "0.1"
+
 libraryDependencies ++= {
   val akkaV = "2.3.6"
   val sprayV = "1.3.2"
