@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat
 
 import scala.collection.JavaConversions._
 
-import ca.hyperreal.markdown._
+import ca.hyperreal.__markdown__._
 
 import akka.actor.Actor
 import spray.routing._
@@ -251,7 +251,7 @@ trait MyService extends HttpService {
 														<div class="blog-post">
 															<h2 class="blog-post-title">{e.get("headline")}</h2>
 															<p class="blog-post-meta">{DATE_FORMAT.format( e.get("date") )} by <a href="#">{blog("realname")}</a></p>
-															{Markdown.asXML( e.get("post").asInstanceOf[String] )}
+															{GFM.asXML( e.get("post").asInstanceOf[String] )}
 														</div>
 													}
 												}

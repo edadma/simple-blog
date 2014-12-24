@@ -10,7 +10,7 @@ scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
 resolvers += "Hyperreal Repository" at "http://hyperreal.ca/maven2"
 
-libraryDependencies += "ca.hyperreal" %% "markdown" % "0.1"
+libraryDependencies += "ca.hyperreal" %% "__markdown__" % "0.2"
 
 libraryDependencies ++= {
   val akkaV = "2.3.6"
@@ -41,7 +41,7 @@ libraryDependencies ++= Seq(
 
 mainClass in assembly := Some( "ca.hyperreal.Boot" )
 
-jarName in assembly := "simple-blog-" + version.value + ".jar"
+jarName in assembly := name.value + "-" + version.value + ".jar"
 
 Revolver.settings
 
